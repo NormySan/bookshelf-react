@@ -1,0 +1,40 @@
+@use '../../../scss/colors';
+@use '../../../scss/mixins';
+
+.bs-page-header {
+  background: colors.$white;
+}
+
+.bs-page-header__content {
+  @include mixins.page-max-width;
+
+  align-items: center;
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+}
+
+.bs-page-header__left,
+.bs-page-header__right {
+  flex: 1;
+}
+
+.bs-page-header__left {
+  margin-right: 30px;
+}
+
+.bs-page-header__right {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 30px;
+}
+
+.bs-page-header__logo {
+  height: 34px;
+}
+
+.bs-page-header__search {
+  max-width: 400px;
+  width: 400px;
+}

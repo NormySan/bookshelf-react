@@ -1,0 +1,52 @@
+@use '../../../scss/colors';
+@use '../../../scss/mixins';
+
+.bs-page-footer {
+  background: colors.$black;
+  padding: 64px 0;
+}
+
+.bs-page-footer__content {
+  @include mixins.page-max-width;
+
+  display: grid;
+  grid-template-areas:
+    'logo menus social'
+    'links links copyright';
+  grid-template-columns: min-content 1fr min-content;
+  row-gap: 120px;
+}
+
+.bs-page-footer__logo {
+  grid-area: logo;
+  margin-right: 72px;
+}
+
+.bs-page-footer__menus {
+  display: flex;
+  gap: 100px;
+  grid-area: menus;
+}
+
+.bs-page-footer__social {
+  grid-area: social;
+  margin-left: 72px;
+}
+
+.bs-page-footer__links {
+  display: flex;
+  gap: 20px;
+  grid-area: links;
+}
+
+.bs-page-footer__link {
+  color: colors.$white;
+  text-decoration-line: underline;
+}
+
+.bs-page-footer__copyright {
+  color: colors.$grey-400;
+  font-size: 12px;
+  grid-area: copyright;
+  text-align: right;
+}

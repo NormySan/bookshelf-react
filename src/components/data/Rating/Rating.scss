@@ -1,0 +1,15 @@
+@use '../../../scss/colors';
+
+.bs-rating {
+  display: flex;
+}
+
+.bs-rating__star {
+  color: colors.$grey-300;
+  cursor: default;
+  font-size: 17px;
+
+  &--filled {
+    color: colors.$yellow-400;
+  }
+}

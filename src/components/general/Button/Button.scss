@@ -1,0 +1,62 @@
+@use '../../../scss/colors';
+@use '../../../scss/variables';
+
+.bs-button {
+  background: colors.$primary-400;
+  border: 0;
+  border-radius: 5px;
+  color: colors.$white;
+  font-family: variables.$font-family;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 12px 22px;
+  text-transform: uppercase;
+
+  &:hover {
+    background: colors.$primary-300;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:active {
+    background: colors.$primary-500;
+  }
+
+  &:disabled {
+    background: colors.$grey-200;
+    color: colors.$grey-300;
+  }
+}
+
+.bs-button--outline {
+  background: transparent;
+  border: 1px solid;
+  color: colors.$black;
+  padding: 11px 22px;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background: transparent;
+  }
+
+  &:hover {
+    border-color: colors.$primary-300;
+    color: colors.$primary-300;
+  }
+
+  &:active {
+    background: colors.$primary-100;
+    border-color: colors.$primary-500;
+    color: colors.$primary-500;
+  }
+
+  &:disabled {
+    background: transparent;
+    border-color: colors.$grey-300;
+    color: colors.$grey-300;
+  }
+}
